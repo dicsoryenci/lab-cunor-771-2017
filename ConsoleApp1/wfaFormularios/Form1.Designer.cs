@@ -38,12 +38,15 @@
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.gvPersonas = new System.Windows.Forms.DataGridView();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvPersonas)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(204, 208);
+            this.btnNuevo.Location = new System.Drawing.Point(32, 208);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(96, 36);
             this.btnNuevo.TabIndex = 0;
@@ -130,16 +133,53 @@
             // gvPersonas
             // 
             this.gvPersonas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvPersonas.Location = new System.Drawing.Point(372, 28);
+            this.gvPersonas.Location = new System.Drawing.Point(371, 28);
             this.gvPersonas.Name = "gvPersonas";
+            this.gvPersonas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvPersonas.Size = new System.Drawing.Size(384, 161);
             this.gvPersonas.TabIndex = 9;
+            this.gvPersonas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvPersonas_CellClick);
+            this.gvPersonas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvPersonas_CellContentClick);
+            this.gvPersonas.Click += new System.EventHandler(this.gvPersonas_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(134, 208);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(96, 36);
+            this.btnGuardar.TabIndex = 10;
+            this.btnGuardar.Text = "Guardar Cambios";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(237, 208);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 36);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Eliminar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(337, 208);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(89, 36);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Eliminar Todo";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 272);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.gvPersonas);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.label4);
@@ -171,6 +211,9 @@
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView gvPersonas;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

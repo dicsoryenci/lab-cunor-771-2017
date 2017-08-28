@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+
+<!--Esto es un comentario -->
+@*<h1>@ViewBag.nombre</h1>*@
+
+@using (Html.BeginForm("Calcular", "Pruebas", FormMethod.Post, new { @class = "col-md-12" }))
+{
+    <label>Número 1</label>
+    @Html.TextBox("num1",null,new { @class = "form-control", id="num1"})
+    <label>Número 2</label>
+    @Html.TextBox("num2",null, new { @class = "form-control" })
+
+    <button type="submit" class="btn btn-success">Enviar</button>
+}
