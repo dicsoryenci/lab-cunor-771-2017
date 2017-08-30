@@ -6,6 +6,10 @@
 
 <h2>Index</h2>
 
+@{ 
+    var miVarible = "Hola Soy una Variable";
+    var resultado = 5 + 35;
+}
 
 <!--Esto es un comentario -->
 @*<h1>@ViewBag.nombre</h1>*@
@@ -13,9 +17,44 @@
 @using (Html.BeginForm("Calcular", "Pruebas", FormMethod.Post, new { @class = "col-md-12" }))
 {
     <label>Número 1</label>
-    @Html.TextBox("num1",null,new { @class = "form-control", id="num1"})
+    @Html.TextBox("num1", null, new { @class = "form-control", id = "num1" })
     <label>Número 2</label>
-    @Html.TextBox("num2",null, new { @class = "form-control" })
+    @Html.TextBox("num2", null, new { @class = "form-control" })
 
     <button type="submit" class="btn btn-success">Enviar</button>
 }
+
+@for (int n = 0; n < 10; n++) {
+    <text>Hola esto es texto</text>
+}
+
+@{
+    var x = 0;
+    var y = 1;
+    while (y < 30)
+    {
+        <p>Numero  @x</p>
+        x = x + y;
+        y = x - y;
+
+    }
+}
+
+<h1>Tabla</h1>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Valor</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int n = 0; n < 10; n++)
+        {
+            <tr>
+                <td>@n</td>
+                <td>Valor</td>
+            </tr>
+        }
+    </tbody>
+</table>
