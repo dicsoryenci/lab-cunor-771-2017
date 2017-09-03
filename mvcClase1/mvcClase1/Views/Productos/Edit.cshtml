@@ -1,0 +1,21 @@
+﻿@model mvcClase1.Models.producto
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Editar Producto</h2>
+
+@using (Html.BeginForm("Edit", "Productos", FormMethod.Post, new { @class = "col-md-12" }))
+{
+    <label>Nombre</label>
+    @Html.Hidden("cod_producto", null, new { @class = "form-control", id = "num1" })
+    @Html.TextBox("nom_producto", null, new { @class = "form-control", id = "num1" })
+    <label>Descripción</label>
+    @Html.TextBox("descripcion", null, new { @class = "form-control" })
+
+    <label>Precio Compra</label>
+    @Html.TextBox("precio_compra", null, new { @class = "form-control" })
+    <button type="submit" class="btn btn-success">Enviar</button>
+}
